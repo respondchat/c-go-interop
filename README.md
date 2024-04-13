@@ -1,6 +1,11 @@
 # C++ GO interop
 
- POC repo for examining calling go code from c++ 
+> POC repo for examining calling go code from c++
+
+## Resources
+
+- [go wiki on cgo](https://go.dev/wiki/cgo)
+- [cgo command](https://pkg.go.dev/cmd/cgo)
 
 ## Running the example
 
