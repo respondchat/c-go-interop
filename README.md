@@ -1,4 +1,6 @@
-# CGO interop
+# C++ GO interop
+
+ POC repo for examining calling go code from c++ 
 
 ## Running the example
 
