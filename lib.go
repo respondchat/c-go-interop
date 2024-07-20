@@ -9,20 +9,6 @@ import (
 	"time"
 )
 
-// Request returns the http status code for the request made to `str`
-//
-//export Request
-func Request(str string) int {
-	client := http.Client{
-		Timeout: time.Millisecond * 200,
-	}
-	resp, err := client.Get(str)
-	if err != nil {
-		return -1
-	}
-	return resp.StatusCode
-}
-
 //export Sqrt
 func Sqrt(n float64) float64 {
 	return math.Sqrt(n)
@@ -31,6 +17,15 @@ func Sqrt(n float64) float64 {
 //export Pow
 func Pow(x float64, y float64) float64 {
 	return math.Pow(x, y)
+}
+
+//export Request
+func Request(str string) int {
+	client := http.Client{
+		Timeout: time.Millisecond * 200,
+	}
+	resp, _ := client.Get(str)
+	return resp.StatusCode
 }
 
 //export Routines

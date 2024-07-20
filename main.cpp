@@ -9,11 +9,9 @@ void maths() {
   std::cout << "power(5, 3)=" << pow << std::endl;
 }
 
-void goroutines() { Routines(7); }
-
-void request() {
+void request(const char *s) {
   GoString str;
-  str.p = "https://xnacly.me";
+  str.p = s;
   str.n = strlen(str.p);
   int r = Request(str);
   std::cout << "http.Get(" << str.p << ")=" << r << std::endl;
@@ -21,6 +19,7 @@ void request() {
 
 int main() {
   maths();
-  request();
-  goroutines();
+  request("https://xnacly.me/5");
+  request("https://xnacly.me/about");
+  Routines(1024);
 }
