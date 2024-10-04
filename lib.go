@@ -24,7 +24,10 @@ func Request(str string) int {
 	client := http.Client{
 		Timeout: time.Millisecond * 200,
 	}
-	resp, _ := client.Get(str)
+	resp, err := client.Get(str)
+	if err != nil {
+		return -1
+	}
 	return resp.StatusCode
 }
 
